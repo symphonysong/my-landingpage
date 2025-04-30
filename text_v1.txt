@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노션 외부 브라우저로 열기 안내</title>
+  <script>
+    window.onload = function() {
+      var target_url = "https://outstanding-epoxy-8b6.notion.site/S-O-N-G-1dc336ea8b5c8091b1d7fe32af724895?pvs=74";
+      var ua = navigator.userAgent.toLowerCase();
+      if (ua.indexOf('kakaotalk') > -1) {
+        // 카카오톡 인앱 브라우저 우회
+        location.href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(target_url);
+      } else {
+        // 그 외 환경은 그냥 노션으로 이동
+        location.href = target_url;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>잠시만 기다려 주세요...</h1>
+  <p>자동으로 노션 페이지로 이동합니다.</p>
+  <p>만약 이동이 안 되면 <a href="https://당신의-노션-주소">여기</a>를 눌러주세요.</p>
+</body>
+</html>
